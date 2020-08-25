@@ -1,0 +1,8 @@
+export SECRET_KEY_BASE="$(mix phx.gen.secret)"
+export DATABASE_URL="postgresql://postgres:postgres@localhost:5432/the_mykolas_dev"
+export APP_NAME=the_mykolas
+export MY_HOSTNAME=example.com
+export MY_COOKIE=the_mykolas_super_secret_cookie
+export REPLACE_OS_VARS=true
+MIX_ENV=prod mix distillery.release --env=prod
+MIX_ENV=prod MY_NODE_NAME=the_mykolas@127.0.0.1 PORT=4000 _build/prod/rel/the_mykolas/bin/the_mykolas foreground
