@@ -1,48 +1,24 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>Peace of mind from prototype to production</p>
-
-  <form phx-change="suggest" phx-submit="search">
-    <input type="text" name="q" value="<%= @query %>" placeholder="Live dependency search" list="results" autocomplete="off"/>
-    <datalist id="results">
-      <%= for {app, _vsn} <- @results do %>
-        <option value="<%= app %>"><%= app %></option>
-      <% end %>
-    </datalist>
-    <button type="submit" phx-disable-with="Searching...">Go to Hexdocs</button>
-  </form>
-</section>
-
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.5/CHANGELOG.md">v1.5 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-    </ul>
-  </article>
-</section>
+  <main class="container flex items-center justify-center min-h-screen py-10">
+    <div class="text-lg">
+      <div class="max-w-lg overflow-hidden rounded-lg">
+        <img alt="Bambucka and me" src="<%= Routes.static_path(TheMykolasWeb.Endpoint, "/images/bambuckaandme.png") %>" />
+      </div>
+      <h1 class="mt-4 text-5xl font-display">Mykolas Mankevicius</h1>
+      <p class="font-body">
+        Hello this is my space.
+      </p>
+      <p>Currently working on <a class="text-teal-500 underline" href="https://octafest.com">Octafest.com</a></p>
+      <p class="mt-4">What else?</p>
+      <ul class="ml-5 list-disc">
+        <li><a class="text-teal-500 underline" href="https://octo-ui.netlify.app">Octo-UI</a></li>
+        <li><a class="text-teal-500 underline" href="https://octo-form.netlify.app/">Octo-Forms</a></li>
+        <li><a class="text-teal-500 underline" href="https://octo-page-builder.netlify.app">Octo-Pagebuilder</a></li>
+      </ul>
+      <p class="mt-4">You can reach me at:</p>
+      <ul class="ml-5 list-disc">
+        <li><a class="text-teal-500 underline" href="https://twitter.com/mmmykolas">Twitter</a></li>
+        <li><a class="text-teal-500 underline" href="https://www.linkedin.com/in/mykolas-mankevicius-42311093/">Linked-in</a></li>
+        <li>Discord: Mykolas#0327</li>
+      </ul>
+    </div>
+  </main>

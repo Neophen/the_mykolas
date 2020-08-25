@@ -1,0 +1,29 @@
+/* purgecss start ignore */
+:root {
+    --var-gray-500: #3d3433;
+    --var-gray-100: #fafafa;
+    --var-primary-400: #A1E1E7;
+    --var-primary-500: #81d3da;
+    --var-primary-600: #79B6BB;
+}
+
+
+.container {
+    max-width: 74.25rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    background: var(--var-gray-100);
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--var-gray-500);
+}
+/* purgecss end ignore */
