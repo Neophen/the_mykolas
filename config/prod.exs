@@ -15,6 +15,7 @@ config :the_mykolas, TheMykolasWeb.Endpoint,
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}",
   url: [host: "${APP_NAME}.gigalixirapp.com", port: 443],
+  check_origin: ["https://themykolas.com", "https://www.themykolas.com"],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -49,8 +50,7 @@ config :logger, level: :info
 # We also recommend setting `force_ssl` in your endpoint, ensuring
 # no data is ever sent via http, always redirecting to https:
 #
-#     config :the_mykolas, TheMykolasWeb.Endpoint,
-#       force_ssl: [hsts: true]
+config :the_mykolas, TheMykolasWeb.Endpoint, force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 
